@@ -62,11 +62,11 @@ class _ZefyrImageState extends State<ZefyrImage> {
     final theme = ZefyrTheme.of(context);
     final image = widget.delegate.buildImage(context, imageSource);
     return _EditableImage(
+      node: widget.node,
       child: Padding(
         padding: theme.defaultLineTheme.padding,
         child: image,
       ),
-      node: widget.node,
     );
   }
 }

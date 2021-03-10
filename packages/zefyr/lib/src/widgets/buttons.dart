@@ -86,9 +86,9 @@ class ZefyrButton extends StatelessWidget {
       style = style.copyWith(color: iconColor);
       return RawZefyrButton(
         action: action,
-        child: Text(_text, style: style),
         color: _getColor(editor, toolbarTheme),
         onPressed: _getPressedHandler(editor, toolbar),
+        child: Text(_text, style: style),
       );
     }
   }
@@ -576,8 +576,8 @@ class _LinkView extends StatelessWidget {
     );
     if (onTap != null) {
       widget = GestureDetector(
-        child: widget,
         onTap: onTap,
+        child: widget,
       );
     }
     return widget;

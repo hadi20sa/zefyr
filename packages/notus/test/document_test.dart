@@ -211,7 +211,7 @@ void main() {
       // and embed.
       final doc = dartconfEmbedDoc();
       doc.delete(8, 1);
-      expect(doc.toPlainText(), 'DartConf\n${kZeroWidthSpace}\nLos Angeles\n');
+      expect(doc.toPlainText(), 'DartConf\n$kZeroWidthSpace\nLos Angeles\n');
     });
 
     test('checks for closed state', () {

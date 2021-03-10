@@ -296,8 +296,8 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
     final list = ListView(
       scrollDirection: Axis.horizontal,
       controller: _controller,
-      children: widget.buttons,
       physics: ClampingScrollPhysics(),
+      children: widget.buttons,
     );
 
     final leftArrow = _showLeftArrow
@@ -311,13 +311,19 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
         SizedBox(
           width: 12.0,
           height: ZefyrToolbar.kToolbarHeight,
-          child: Container(child: leftArrow, color: theme.color),
+          child: Container(
+            color: theme.color,
+            child: leftArrow,
+          ),
         ),
         Expanded(child: ClipRect(child: list)),
         SizedBox(
           width: 12.0,
           height: ZefyrToolbar.kToolbarHeight,
-          child: Container(child: rightArrow, color: theme.color),
+          child: Container(
+            color: theme.color,
+            child: rightArrow,
+          ),
         ),
       ],
     );

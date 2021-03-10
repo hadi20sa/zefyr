@@ -72,8 +72,7 @@ class _ZefyrLineState extends State<ZefyrLine> {
           break;
       }
 
-      content = EditableBox(
-        child: content,
+      content = EditableBox(        
         node: widget.node,
         layerLink: _link,
         renderContext: scope.renderContext,
@@ -81,6 +80,7 @@ class _ZefyrLineState extends State<ZefyrLine> {
         selection: scope.selection,
         selectionColor: theme.textSelectionColor,
         cursorColor: cursorColor,
+        child: content,
       );
       content = CompositedTransformTarget(link: _link, child: content);
     }
